@@ -1,3 +1,45 @@
+"""
+Tuple vs List in Python using Employee Details
+
+This example the difference between a tuple and a list
+using employee details such as ID, name, age, phone number, and email address.
+
+ Tuple: When the data should not be modified (immutable)
+ List: When the data might change in the future (mutable)
+"""
+
+# --------------------------
+# Example 1: Using a Tuple
+# --------------------------
+
+# Tuple stores employee info (immutable)
+employee_tuple = (101, "Neeraj", 24, "9390201791", "basasaineeraj@gmail.com")
+
+print("Employee Details using Tuple (Immutable):")
+print("ID:   ", employee_tuple[0])
+print("Name: ", employee_tuple[1])
+print("Age:  ", employee_tuple[2])
+print("Phone:", employee_tuple[3])
+print("Email:", employee_tuple[4])
+
+# employee_tuple[2] = 26  This will raise an error because tuples are immutable
+# Example 2: Using a List
+# List stores employee info (mutable)
+employee_list = [102, "Dheeraj", 26, "7989253743", "dheeraj@gmail.com"]
+
+print("Employee Details using List (Mutable):")
+print("ID:   ", employee_list[0])
+print("Name: ", employee_list[1])
+print("Age:  ", employee_list[2])
+print("Phone:", employee_list[3])
+print("Email:", employee_list[4])
+
+#  Updating phone number (possible with list)
+employee_list[3] = "9123456789"
+print(" Updated Phone Number:", employee_list[3])
+
+
+
 '''
 (Home  work)
 Write  a  program  to  determine  area  and  perimeter  of  rectangle
