@@ -1,17 +1,3 @@
-Write  a  program  to  search  for  'x'  in  fibonacci  series
-
-1) Let  input  be   10
-    What  is  the  output ? --->	Not  found
-
-2) Let  input  be   21
-    What  is  the  output ? ---> Found
-
-3) Do  not  generate  fibonacci  series
-'''
-Enter  value  to  be  searched :  10
-Not  Found
-Enter  value  to  be  searched :  21
-Found
 '''
 Write  a  program  to  determine  1.1 + 2.2 + 3.3 + .... n terms
 
@@ -19,8 +5,16 @@ Write  a  program  to  determine  1.1 + 2.2 + 3.3 + .... n terms
 
 2) What  is  added  to  sum  in  general ?  ---> 1.1 * i   where  'i'  varies  from  1  to  n
 '''
-How  many  terms  would  you  like  to  add   :  5
-Sum  :   16.5
+n = int(input("How many terms would you like to add   : "))
+
+sum = 0.0
+for i in range(1, n + 1):
+    sum += 1.1 * i
+
+print("Sum  :  ", sum)
+o/p: How many terms would you like to add   : 5
+     Sum  :   16.5
+
 '''
 Write  a  program  to  determine  sum  of  first  20  even  numbers
 
@@ -28,7 +22,13 @@ Write  a  program  to  determine  sum  of  first  20  even  numbers
 
 2) What  is  added  to  sum  in  general ? ---> 2 * i   where 'i'  varies  from   1  to  20
 '''
-Sum  of  first  20  even  numbers :   420
+sum = 0
+for i in range(1, 21):
+    sum += 2 * i
+
+print("Sum of first 20 even numbers :", sum)
+
+o/p : Sum  of  first  20  even  numbers :   420
 '''
 Write  a  program  to  determine  sum  of  first  20  odd  numbers
 
@@ -36,14 +36,29 @@ Write  a  program  to  determine  sum  of  first  20  odd  numbers
 
 2) What  is  added  to  sum  in  general ? --->  2 * i - 1   where 'i'  varies  from   1  to  20
 '''
-Sum  of  first  20  odd  numbers :   400
+sum = 0
+for i in range(1, 21):
+    sum += 2 * i - 1
+
+print("Sum of first 20 odd numbers :", sum)
+
+o/p: Sum  of  first  20  odd  numbers :   400
 '''
 Write  a  program  to  determine  1 + 2 + 3 + .... + n  without  using  formula  n * (n + 1) / 2
 
 What  is  added  to  sum  in  general ? --->  'i'  where  'i'  varies  from  1  to   n
 '''
-How  many  terms  would  you  like  to  add   :  10
-Sum :   55
+n = int(input("How many terms would you like to add   : "))
+
+sum = 0
+for i in range(1, n + 1):
+    sum += i
+
+print("Sum : ", sum)
+
+o/p: How  many  terms  would  you  like  to  add   :  10
+o/P: Sum :   55
+
 # Find  outputs  (Home  work)
 for  i   in   range(1 , 8):
 	print(i)
@@ -54,11 +69,32 @@ for  i   in   range(1 , 8):
 	print('Hello')
 # End of loop
 print('Outside loop')
+o/p:    1
+	Sec
+	Hello
+	2
+	Sec
+	Hello
+	3
+	4
+	Sec
+	Hello
+	5
+	Sec
+	Hello
+	6
+	7
+	Sec
+	Hello
+	Outside loop
+
 # Identify Error  (Home  work)
 if ():
 	print('Hyd')
 	continue
 	print('Sec')
+o/p: Error  if () is invalid.
+     continue is invalid outside loops.
 # Find outputs (Home  work)
 for  i   in   range(1 , 8):
 	print(i)
@@ -66,14 +102,24 @@ for  i   in   range(1 , 8):
 		break
 	else:
 		print('Sec')
-	print('Hello')
+	print('Hello')	
 # End  of  the  loop
 print('Outside loop')
+o/p:    1
+	Sec
+	Hello
+	2
+	Sec
+	Hello
+	3
+	Outside loop
+
 # Identify Error  (Home  work)
 if(10 , 20 , 30):
 	print('Hyd')
 	break
 	print('Sec')
+o/p: SyntaxError: 'break' outside loop
 # Find  outputs  (Home  work)
 for  i   in   range(1 , 8):
 	print(i)
@@ -85,6 +131,29 @@ for  i   in   range(1 , 8):
 	print('Hello')
 # End  of  the  loop
 print('Outside loop')
+o/p:    1
+	Sec
+	Hello
+	2
+	Sec
+	Hello
+	3
+	Hyd
+	Hello
+	4
+	Sec
+	Hello
+	5
+	Sec
+	Hello
+	6
+	Hyd
+	Hello
+	7
+	Sec
+	Hello
+	Outside loop
+
 # Find  outputs  (Home  work)
 for  i   in   range(1 , 8):
 	print(i)
@@ -95,8 +164,14 @@ for  i   in   range(1 , 8):
 	print('Hello')
 # End  of  the  loop
 print('Outside loop')
-.........................
-4th March 25
+o/p:    1
+	Sec
+	Hello
+	2
+	Sec
+	Hello
+	3
+
 # Find  outputs  (Home  work)
 for  i  in  range(1 , 8):
 	print(i)
@@ -109,6 +184,26 @@ else:
 	print('else  suite')
 # End  of  the  loop
 print('Outside  loop')
+o/p:    1
+	Sec
+	Hello
+	2
+	Sec
+	Hello
+	3
+	4
+	Sec
+	Hello
+	5
+	Sec
+	Hello
+	6
+	7
+	Sec
+	Hello
+	else suite
+	Outside loop
+
 # Find  outputs  (Home  work)
 for  i  in  range(1 , 8):
 	print(i)
@@ -121,6 +216,15 @@ else:
 	print('else  suite')
 #End   of  the  loop
 print('Outside  loop')
+o/p:    1
+	Sec
+	Hello
+	2
+	Sec
+	Hello
+	3
+	Outside loop
+
 # Find  outputs  (Home  work)
 for  i  in  range(1 , 8):
 	print(i)
@@ -133,6 +237,30 @@ else:
 	print('else  suite')
 # End  of  the  loop
 print('Outside loop')
+o/p:    1
+	Sec
+	Hello
+	2
+	Sec
+	Hello
+	3
+	Sec
+	Hello
+	4
+	Sec
+	Hello
+	5
+	Sec
+	Hello
+	6
+	Sec
+	Hello
+	7
+	Sec
+	Hello
+	else suite
+	Outside loop
+
 '''
 Write  a  program  to  search  for  an  element  in  the  list  without  using  in  operator  and
 print  Found  or  Not  Found  message  (Assume  that  there  are  no  duplicates)
@@ -140,42 +268,46 @@ print  Found  or  Not  Found  message  (Assume  that  there  are  no  duplicates
 Note:  Do  not  use  index()  method
 
 Let  list  be   [10 , 20 , 15 , 12 , 18]
-1) What  is  the  output  if  15  is  seacrhed ?  --->  Found  at  index  2
 
-2) What  is  the  output  if  19  is  seacrhed ?  --->  Not  found
+lst = [10, 20, 15, 12, 18]
+x = int(input("Enter value to search: "))
 
-3) What  action  to  be  made  if  'x'  is  not  matched  with  the  current  element  of  list ?  --->  Compare  'x'  with  next  element  of  list
-
-4) What  action  to  be  made  if  'x'  is   matched   with  list  element ?  --->  Print  found   message  along  with  index  and
-																														  don't   search  in  rest  of  the  list
+found = False
+for i in range(len(lst)):
+    if lst[i] == x:
+        print("Found at index", i)
+        found = True
+        break
+if not found:
+    print("Not found")
+																	  don't   search  in  rest  of  the  list
 
 5) W…
 #  Walrus   operator (:=)  demo  program
-print(a := 25)
-print(a = 25)
-print(a)
-print(a := 6 + 7)
-print(a)
-print((a := 6) + 7)
-print(a)
-print((a = 6) + 7)
+print(a := 25) # valid
+print(a = 25) # Error 
+print(a) # 25
+print(a := 6 + 7) # valid
+print(a) # 13
+print((a := 6) + 7) # 13
+print(a) # 6
+print((a = 6) + 7) # Error
 # Find  outputs  (Home  work)
 a = 0
-if  a == 0:  
-	print('Hyd')  
+if a == 0:
+    print('Hyd')          # o/p: Hyd
+
+if (b := 0):              # Assigns b=0, condition is False
+    print('Hyd')
 else:
-	print('Sec')
-if  b := 0: 
-	print('Hyd')
-else:
-	print('Sec : ' , b)  
-if  c = 0: 
-	print('Hyd')
-else:
-	print('Sec')
+    print('Sec :', b)     # Output: Sec : 0
+
+if c = 0:                 # Error invalid assignment in if
+    print('Hyd')
+
 # Find  outputs
 b = 10
-a = b += 5  
+a = b += 5  # SyntaxError: cannot assign to assignment
 print(a)
 '''
 (Home  work)
@@ -188,53 +320,69 @@ sum = 0 + 25 + 10.8 + True + 46 + 34.8 + False + 95
 
 ctr = 0  + 1 + 1 + 1 + 1 + 1 + 1 + 1
 '''
-Enter input  (-1  to  stop)  :  25
-Enter input  (-1  to  stop)  :  10.8
-Enter input  (-1  to  stop)  :  True
-Enter input  (-1  to  stop)  :  46.2
-Enter input  (-1  to  stop)  :  False
-Enter input  (-1  to  stop)  :  92
-Enter input  (-1  to  stop)  :  -1
-Average :   29.166666666666668
+sum = 0
+count = 0
+
+while True:
+    val = input("Enter input (-1 to stop)  : ")
+    if val == '-1':
+        break
+    sum += eval(val)
+    count += 1
+
+if count > 0:
+    print("Average : ", sum / count)
+else:
+    print("No values entered.")
+i/p:    25
+	10.8
+	True
+	46.2
+	False
+	92
+	-1
+
+o/p:    Average :   29.166666666666668
+
 #  del  operator  demo program  (Home  work)
 a = 25
-print(a)
-del   a
-print(a)
+print(a) # 25
+del   a 
+print(a) # Error
 # Find  outputs  (Home  work)
 a = b = c = 25
-print(a , b , c)
-del   a
-print(b , c)
-print(a)
-del   b
-print(c)
-print(b)
-del   c
-print(c)
+print(a , b , c) # 25 25 25
+del   a # ref a is lost
+print(b , c) # 25 25
+print(a) # Error 
+del   b # ref b is lost
+print(c) # 25
+print(b) # Error
+del   c # ref c is lost
+print(c) # Error
 #  Can  multiple  objects  be  deleted  with  same  del  operator ?
 a , b , c = 25 , 10.8 , 'Hyd'
-print(a , b , c)
+print(a , b , c) # 25 10.8 'Hyd'
 del   a , b , c
-print(a)
-print(b)
-print(c)
+print(a) # Error becoz  ref a is lost
+print(b) # Error becoz  ref b is lost
+print(c) # Error becoz  ref c is lost
 # Find outputs  (Home  work)
 a = [10 , 20 , 15 , 18]
-print(a)
-del  a[2]
-print(a)
-del  a
-print(a)
-print(a[0])
+print(a) # [10 , 20 , 15 , 18]
+del  a[2] # [10 , 20 , 18]
+print(a) # [10 , 20 , 18]
+del  a # list is del
+print(a) # Error ref a is gone
+print(a[0]) # Error ref is gone
 # Find outputs  (Home work)
 a = (10 , 20 , 15 , 18)
-print(a)
-print(a[0])
-del  a[2]
-del  a
-print(a)
-print(a[0])
+print(a) # (10 , 20 , 15 , 18)
+print(a[0]) # 10
+del  a[2] # can't modify Error
+del  a # deletes whole tuple
+print(a) # Error becoz ref is deleted
+print(a[0]) # Error no ref
 
 #search for an element in list without in operator
 lst=[10,20,15,12,18,15,19,14,15,14]
@@ -464,24 +612,17 @@ except:
 	print("Pls  enter  alternate  char  and  digit")
 
 OUTPUT:
-enter string:A4B3C2$5
+enter string: A4B3C2$5
 AAAABBBCC$$$$$
 
 
 # Find outputs  
-print( 'green'   in   'Hyd  is  green  city') 
-print('day'   in   'Sankar  dayal  sarma') 
-print('Green'   in   'Hyd  is  green  city')
-print('d  is'   in   'Hyd  is  green  city') 
-print('dis'   in   'Hyd  is  green  city') 
-print('iniv'   in   'Srinivas') 
-print('iniv'   not   in   'Srinivas')
+print( 'green'   in   'Hyd  is  green  city') # True
+print('day'   in   'Sankar  dayal  sarma') # True
+print('Green'   in   'Hyd  is  green  city') # False
+print('d  is'   in   'Hyd  is  green  city') # True
+print('dis'   in   'Hyd  is  green  city') # False
+print('iniv'   in   'Srinivas') # True
+print('iniv'   not   in   'Srinivas') # False
 
-OUTPUTS:
-True
-True
-False
-True
-False
-True
-False
+
